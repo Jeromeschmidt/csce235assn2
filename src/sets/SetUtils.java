@@ -83,11 +83,7 @@ public class SetUtils {
 	 */
 	public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
 	{
-		Set<T> result = new HashSet<T>();
-		
-		
-		
-		return result;
+	   
 	}
 
 	/**
@@ -98,13 +94,9 @@ public class SetUtils {
 	 * @param size
 	 * @return
 	 */
-	//public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) 
+	public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) 
 	{
-		Set<T> result = new HashSet<T>();
-		
-		
-		
-		return result;
+
 	}
 
 	/**
