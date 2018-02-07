@@ -1,6 +1,8 @@
 package sets; //DO NOT CHANGE THE PACKAGE
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import unl.cse.utils.Pair;
@@ -70,7 +72,6 @@ public class SetUtils {
 				}
 			}
 		}
-		
 		return result;
 	}
 
@@ -83,7 +84,22 @@ public class SetUtils {
 	 */
 	public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
 	{
-	   
+	    Set<Set<T>> result = new HashSet<Set<T>>();
+	    /*if (a.isEmpty()) {
+	        result.add(new HashSet<T>());
+	        return result;
+	    }*/
+	    List<T> list = new ArrayList<T>(a);
+	    T head = list.get(0);
+	    Set<T> rest = new HashSet<T>(list.subList(1, list.size())); 
+	    for (Set<T> set : getPowerSet(rest)) {
+	        Set<T> newSet = new HashSet<T>();
+	        newSet.add(head);
+	        newSet.addAll(set);
+	        result.add(newSet);
+	        result.add(set);
+	    }       
+	    return result;
 	}
 
 	/**
@@ -96,7 +112,9 @@ public class SetUtils {
 	 */
 	public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) 
 	{
+	    Set<Set<T>> result = new HashSet<Set<T>>();
 
+	    return result;
 	}
 
 	/**
@@ -137,7 +155,7 @@ public class SetUtils {
 				}
 				else
 				{
-					result.add(element1);
+					result.add(element);
 				}
 			}
 		}
@@ -155,7 +173,16 @@ public class SetUtils {
 	 */
 	public static <S, T> Set<Pair<S, T>> cartesianProduct(Set<S> a, Set<T> b) 
 	{
-		return null;
+	    Set result = new HashSet<Set<T>>();
+	    
+	    for (S i : a)
+	    {
+	        for (T j : b)
+	        {
+	            result.add("(" + i + "," + j + ")");
+	        }
+	    }
+		return result;
 	}
 
 }
