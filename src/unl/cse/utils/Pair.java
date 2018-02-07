@@ -1,4 +1,4 @@
-package utils;
+package unl.cse.utils;
 
 import java.util.Comparator;
 
@@ -11,7 +11,8 @@ import java.util.Comparator;
  * @param <X>
  * @param <Y>
  */
-public class Pair<X,Y>  {
+public class Pair<X,Y>  
+{
     protected final X first;
     protected final Y second;
     

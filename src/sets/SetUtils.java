@@ -81,11 +81,12 @@ public class SetUtils {
 	 * @param a
 	 * @return The power set of <code>a</code>
 	 */
-	public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
+	//public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
 	{
-		Set<T> result = new HashSet<T>();
+		//Set<T> result = new HashSet<T>();
 		
-		return result;
+		
+		//return result;
 	}
 
 	/**
@@ -96,8 +97,13 @@ public class SetUtils {
 	 * @param size
 	 * @return
 	 */
-	public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) {
-		return null;
+	//public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) 
+	{
+		//Set<T> result = new HashSet<T>();
+		
+		
+		
+		//return result;
 	}
 
 	/**
@@ -108,9 +114,43 @@ public class SetUtils {
 	 * @param b
 	 * @return The symmetric difference of the two given sets.
 	 */
-	public static <T> Set<T> symmetricDifference(Set<T> a, Set<T> b) {
-		return null;
-	}
+	public static <T> Set<T> symmetricDifference(Set<T> a, Set<T> b) 
+	{
+		Set<T> result = new HashSet<T>();
+		
+		for (T element : a) 
+		{
+			for (T element1 : b) 
+			{
+				if(element == element1)
+				{
+					result.remove(element);
+					result.remove(element1);
+				}
+				else
+				{
+					result.add(element);
+				}
+			}
+		}
+		for (T element : b) 
+		{
+			for (T element1 : a) 
+			{
+				if(element == element1)
+				{
+					result.remove(element);
+					result.remove(element1);
+				}
+				else
+				{
+					result.add(element1);
+				}
+			}
+		}
+		
+		return result;
+	//}
 
 	/**
 	 * This method returns a new set representing the Cartesian product of the
@@ -120,8 +160,8 @@ public class SetUtils {
 	 * @param b
 	 * @return The Cartesian product of the two given sets.
 	 */
-	public static <S, T> Set<Pair<S, T>> cartesianProduct(Set<S> a, Set<T> b) {
-		return null;
+	//public static <S, T> Set<Pair<S, T>> cartesianProduct(Set<S> a, Set<T> b) {
+		//return null;
 	}
 
 }
