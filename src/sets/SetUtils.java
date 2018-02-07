@@ -1,4 +1,4 @@
-/*package sets; //DO NOT CHANGE THE PACKAGE
+package sets; //DO NOT CHANGE THE PACKAGE
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,7 +19,7 @@ public class SetUtils {
 	 * @param b
 	 *            The second set
 	 * @return The set minus of a - b
-	 
+	 */
 	public static <T> Set<T> setMinus(Set<T> a, Set<T> b) {
 		Set<T> result = new HashSet<T>();
 
@@ -36,7 +36,7 @@ public class SetUtils {
 	 * @param a
 	 * @param b
 	 * @return The union of <code>a</code> and <code>b</code>
-	 
+	 */
 	public static <T> Set<T> union(Set<T> a, Set<T> b) 
 	{
 		Set<T> result = new HashSet<T>();
@@ -55,7 +55,7 @@ public class SetUtils {
 	 * @param a
 	 * @param b
 	 * @return The intersection of <code>a</code> and <code>b</code>
-	 
+	 */
 	public static <T> Set<T> intersection(Set<T> a, Set<T> b) 
 	{
 		Set<T> result = new HashSet<T>();
@@ -80,13 +80,13 @@ public class SetUtils {
 	 * 
 	 * @param a
 	 * @return The power set of <code>a</code>
-	 
-	//public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
+	 */
+	public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
 	{
-		//Set<T> result = new HashSet<T>();
+		Set<T> result = new HashSet<T>();
 		
 		
-		//return result;
+		return result;
 	}
 
 	/**
@@ -96,14 +96,14 @@ public class SetUtils {
 	 * @param a
 	 * @param size
 	 * @return
-	 
+	 */
 	//public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) 
 	{
-		//Set<T> result = new HashSet<T>();
+		Set<T> result = new HashSet<T>();
 		
 		
 		
-		//return result;
+		return result;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class SetUtils {
 	 * @param a
 	 * @param b
 	 * @return The symmetric difference of the two given sets.
-	 
+	 */
 	public static <T> Set<T> symmetricDifference(Set<T> a, Set<T> b) 
 	{
 		Set<T> result = new HashSet<T>();
@@ -150,7 +150,7 @@ public class SetUtils {
 		}
 		
 		return result;
-	//}
+	}
 
 	/**
 	 * This method returns a new set representing the Cartesian product of the
@@ -159,9 +159,10 @@ public class SetUtils {
 	 * @param a
 	 * @param b
 	 * @return The Cartesian product of the two given sets.
-	 
-	//public static <S, T> Set<Pair<S, T>> cartesianProduct(Set<S> a, Set<T> b) {
-		//return null;
+	 */
+	public static <S, T> Set<Pair<S, T>> cartesianProduct(Set<S> a, Set<T> b) 
+	{
+		return null;
 	}
 
-}*/
+}
