@@ -1,4 +1,4 @@
-package sets; //DO NOT CHANGE THE PACKAGE
+package unl.cse.sets; //DO NOT CHANGE THE PACKAGE
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -44,8 +44,19 @@ public class SetUtils {
 		Set<T> result = new HashSet<T>();
 
 		result.addAll(a);
-		for (T element : b) {
-			result.add(element);
+		for (T element : b) 
+		{
+			for(T element1 : a)
+			{
+				if(element == element1)
+				{
+					//do nothing
+				}
+				else
+				{
+					result.add(element);
+				}
+			}
 		}
 		return result;
 	}
@@ -85,10 +96,10 @@ public class SetUtils {
 	public static <T> Set<Set<T>> getPowerSet(Set<T> a) 
 	{
 	    Set<Set<T>> result = new HashSet<Set<T>>();
-	    /*if (a.isEmpty()) {
+	    if (a.isEmpty()) {
 	        result.add(new HashSet<T>());
 	        return result;
-	    }*/
+	    }
 	    List<T> list = new ArrayList<T>(a);
 	    T head = list.get(0);
 	    Set<T> rest = new HashSet<T>(list.subList(1, list.size())); 
@@ -102,7 +113,7 @@ public class SetUtils {
 	    return result;
 	}
 
-	/**
+	/**TODO
 	 * Returns a set containing all subsets of the given set <code>a</code> that
 	 * have cardinality <code>size</code>.
 	 * 
@@ -113,7 +124,17 @@ public class SetUtils {
 	public static <T> Set<Set<T>> getSetsOfCardinality(Set<T> a, int size) 
 	{
 	    Set<Set<T>> result = new HashSet<Set<T>>();
-
+	    int index = 0;
+	    int start = index;
+	    int end = start + size;
+	    
+	    for(start = index; start < end; start++)
+	    {
+	    	
+	    }
+	    
+	    index++;
+	    
 	    return result;
 	}
 
@@ -128,15 +149,16 @@ public class SetUtils {
 	public static <T> Set<T> symmetricDifference(Set<T> a, Set<T> b) 
 	{
 		Set<T> result = new HashSet<T>();
-		
+	    
+	    
 		for (T element : a) 
 		{
 			for (T element1 : b) 
 			{
 				if(element == element1)
 				{
-					result.remove(element);
-					result.remove(element1);
+					//result.remove(element);
+					//result.remove(element1);
 				}
 				else
 				{
@@ -150,8 +172,7 @@ public class SetUtils {
 			{
 				if(element == element1)
 				{
-					result.remove(element);
-					result.remove(element1);
+					//result.remove(element);
 				}
 				else
 				{
@@ -163,7 +184,7 @@ public class SetUtils {
 		return result;
 	}
 
-	/**
+	/**TODO
 	 * This method returns a new set representing the Cartesian product of the
 	 * two given sets.
 	 * 
@@ -175,11 +196,11 @@ public class SetUtils {
 	{
 	    Set result = new HashSet<Set<T>>();
 	    
-	    for (S i : a)
+	    for (S element : a)
 	    {
-	        for (T j : b)
+	        for (T element1 : b)
 	        {
-	            result.add("(" + i + "," + j + ")");
+	            result.add();
 	        }
 	    }
 		return result;
